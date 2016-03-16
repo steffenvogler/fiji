@@ -1,0 +1,11 @@
+v=getSliceNumber;
+path=File.directory;
+run("Stack to Images")
+for (i=0; i<v; i++) {
+	run("Scale...", "x=0.1 y=0.1 width=2844 height=1619 interpolation=Bilinear average create title=P4_GFPrb488_sl101_121106-1.tif");
+	saveAs("Jpeg", path+"split"+i+1);
+   close();
+   for (k=1; k<=5; k++) {
+   run("Collect Garbage");
+}
+   
